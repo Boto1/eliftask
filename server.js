@@ -30,7 +30,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 // Listen for orders query
-app.get('/api/purchases', async (req, res) => {
+app.get('/purchases', async (req, res) => {
   // Connect to database
   const client = await MongoClient.connect(uri, {
     useNewUrlParser: true
