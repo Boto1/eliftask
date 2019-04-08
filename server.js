@@ -46,6 +46,8 @@ app.get('/purchases', async (req, res) => {
     }
     else {
       // Send documents to the client
+      res.setHeader('Last-Modified', (new Date()).toUTCString());
+      res.header("Cache-Control", "no-cache, no-store, must-revalidate");
       res.status(200).json(result);
     }
   })
