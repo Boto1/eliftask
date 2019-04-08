@@ -21,6 +21,11 @@ const upload = multer({
   storage
 });
 
+// Listen to root path
+app.get('*', (request, response) => {
+	response.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+});
+
 // Listen for orders query
 app.get('/api/purchases', async (req, res) => {
   // Connect to database

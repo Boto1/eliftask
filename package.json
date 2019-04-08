@@ -14,7 +14,6 @@
   "license": "MIT",
   "devDependencies": {},
   "dependencies": {
-    "cloudinary": "^1.14.0",
     "concurrently": "^3.5.1",
     "express": "^4.16.4",
     "fast-csv": "^2.4.1",

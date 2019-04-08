@@ -7,7 +7,7 @@ npm install
 # Install dependencies for client
 npm run client-install
 
-# Run the client & server with concurrently
+# Run the client & server with concurrently (Run the whole project)
 npm run dev
 
 # Run the server only
