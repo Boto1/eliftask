@@ -8,6 +8,7 @@ const MongoClient = require('mongodb').MongoClient;
 // Initialize express server
 const app = express();
 const port = process.env.PORT || 5000;
+app.disable('etag');
 // Mongodb connection uri
 const uri = "mongodb+srv://botol:eliftechtask@eliftask-0wpdd.mongodb.net/test?retryWrites=true";
 // Set up multer storage configuration
