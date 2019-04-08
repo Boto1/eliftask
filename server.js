@@ -21,10 +21,13 @@ const upload = multer({
   storage
 });
 
-// Listen to root path
-app.get('*', (request, response) => {
-	response.sendFile(path.join(__dirname, 'client/build', 'index.html'));
-});
+// Production config
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('client/build'));
+  app.get('*', (request, response) => {
+    response.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+  });
+}
 
 // Listen for orders query
 app.get('/api/purchases', async (req, res) => {
